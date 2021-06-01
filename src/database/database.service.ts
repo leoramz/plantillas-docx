@@ -17,7 +17,7 @@ export const databaseProviders = [
             database: config.get(Configuration.DB_NAME),
             password: config.get(Configuration.DB_PASSWORD),
             entities: ['dist/**/**/*.entity{.ts,.js}'],
-            synchronize: true
+            synchronize: false
           } as ConnectionOptions;
         },
     }),
