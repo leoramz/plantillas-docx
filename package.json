@@ -22,7 +22,6 @@
     "migration:generate": "ts-node ./node_modules/typeorm/cli.js migration:generate --config ./orm.config.json --name",
     "migration:run": "ts-node ./node_modules/typeorm/cli.js migration:run --config ./orm.config.json",
     "migration:revert": "ts-node ./node_modules/typeorm/cli.js migration:revert --config ./orm.config.json"
-
   },
   "dependencies": {
     "@nestjs/common": "^7.6.15",
@@ -34,10 +33,12 @@
     "bcryptjs": "^2.4.3",
     "class-transformer": "^0.4.0",
     "class-validator": "^0.13.1",
+    "docxtemplater": "^3.21.2",
     "jsonwebtoken": "^8.5.1",
     "mysql2": "^2.2.5",
     "passport": "^0.4.1",
     "passport-jwt": "^4.0.0",
+    "pizzip": "^3.0.6",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
     "rxjs": "^6.6.6",

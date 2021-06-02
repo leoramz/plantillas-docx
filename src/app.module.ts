@@ -5,9 +5,10 @@ import { ConfigService } from './config/config.service';
 import { DatabaseModule } from './database/database.module';
 import { CategoryModule } from './modules/category/category.module';
 import { VariableModule } from './modules/variable/variable.module';
+import { ValueModule } from './modules/value/value.module';
 
 @Module({
-  imports: [ConfigModule, DatabaseModule, CategoryModule, VariableModule],
+  imports: [ConfigModule, DatabaseModule, CategoryModule, VariableModule, ValueModule],
   controllers: [],
   providers: [],
 })
