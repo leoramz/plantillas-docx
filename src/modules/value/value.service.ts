@@ -2,7 +2,7 @@ import { BadRequestException, Injectable, NotFoundException } from '@nestjs/comm
 import { InjectRepository } from '@nestjs/typeorm';
 import { plainToClass } from 'class-transformer';
 import { In } from 'typeorm';
-import { Status } from '../../shared/status.enum';
+import { Status } from '../../utils/status.enum';
 import { Variable } from '../variable/variable.entity';
 import { VariableRepository } from '../variable/variable.repository';
 import { CreateValueDto, DeleteValueDto, ReadValueDto, UpdateValueDto } from './dto';

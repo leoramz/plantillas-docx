@@ -6,9 +6,10 @@ import { DatabaseModule } from './database/database.module';
 import { CategoryModule } from './modules/category/category.module';
 import { VariableModule } from './modules/variable/variable.module';
 import { ValueModule } from './modules/value/value.module';
+import { DocumentModule } from './modules/document/document.module';
 
 @Module({
-  imports: [ConfigModule, DatabaseModule, CategoryModule, VariableModule, ValueModule],
+  imports: [ConfigModule, DatabaseModule, CategoryModule, VariableModule, ValueModule, DocumentModule],
   controllers: [],
   providers: [],
 })

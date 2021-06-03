@@ -1,4 +1,4 @@
-import { Status } from "../../shared/status.enum";
+import { Status } from "../../utils/status.enum";
 import { BaseEntity, Column, CreateDateColumn, Entity, ManyToOne, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
 import { Variable } from "../variable/variable.entity";
 
@@ -10,7 +10,7 @@ export class Value extends BaseEntity {
     @Column({ type: 'varchar', length: 100, nullable: false })
     value: string;    
 
-    @ManyToOne(type => Variable, variable => variable.values, { eager: true })
+    @ManyToOne(() => Variable, variable => variable.values, { eager: true })
     variable: Variable;
 
     @Column({ type: 'varchar', default: Status.ACTIVE, length: 8 })
