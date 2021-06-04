@@ -1,6 +1,7 @@
 import { Exclude, Expose, Type } from "class-transformer";
 import { IsNumber, IsString } from "class-validator";
-import { ReadValueDto } from "src/modules/value/dto";
+import { ReadDocumentDto } from "../../document/dto";
+import { ReadValueDto } from "../../value/dto";
 import { ReadCategoryDto } from "../../category/dto";
 
 @Exclude()
@@ -28,4 +29,8 @@ export class ReadVariableDto {
     @Expose()
     @Type(() => ReadValueDto)
     readonly values: ReadValueDto[];
+
+    @Expose()
+    @Type(() => ReadDocumentDto)
+    readonly documents: ReadValueDto[];
 }

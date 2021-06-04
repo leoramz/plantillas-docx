@@ -4,6 +4,7 @@ export const imageFileFilter = (req, file, callback) => {
   if (!file.originalname.match(/\.(jpg|jpeg|png|gif)$/)) {
     return callback(new Error('Only image files are allowed!'), false);
   }
+
   callback(null, true);
 };
 
@@ -11,6 +12,7 @@ export const docxFileFilter = (req, file, callback) => {
     if (!file.originalname.match(/\.(docx)$/)) {
       return callback(new Error('Only docx files are allowed!'), false);
     }
+
     callback(null, true);
   };
 
@@ -21,5 +23,6 @@ export const editFileName = (req, file, callback) => {
     .fill(null)
     .map(() => Math.round(Math.random() * 16).toString(16))
     .join('');
+    
   callback(null, `${name}-${randomName}${fileExtName}`);
 };

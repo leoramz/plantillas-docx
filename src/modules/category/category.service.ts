@@ -1,7 +1,7 @@
 import { BadRequestException, Injectable, NotFoundException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { plainToClass } from 'class-transformer';
-import { Status } from '../../utils/status.enum';
+import { Status } from '../../utils/status.enum.utils';
 import { Category } from './category.entity';
 import { CategoryRepository } from './category.repository';
 import { CreateCategoryDto, DeleteCategoryDto, ReadCategoryDto, UpdateCategoryDto } from './dto';

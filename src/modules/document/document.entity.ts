@@ -1,4 +1,4 @@
-import { Status } from "../../utils/status.enum";
+import { Status } from "../../utils/status.enum.utils";
 import { BaseEntity, Column, CreateDateColumn, Entity, JoinTable, ManyToMany, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
 import { Variable } from "../variable/variable.entity";
 
@@ -12,6 +12,9 @@ export class Document extends BaseEntity {
 
     @Column({ type: 'text', nullable: true })
     description: string;
+
+    @Column({ type: 'text', nullable: true })
+    filename: string;
 
     @ManyToMany(() => Variable, variable => variable.documents, { eager: true })
     @JoinTable({ name: 'documents_variables'})

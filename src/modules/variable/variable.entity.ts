@@ -1,4 +1,4 @@
-import { Status } from "../../utils/status.enum";
+import { Status } from "../../utils/status.enum.utils";
 import { BaseEntity, Column, CreateDateColumn, Entity, JoinColumn, ManyToMany, ManyToOne, OneToMany, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
 import { Category } from "../category/category.entity";
 import { Value } from '../value/value.entity'

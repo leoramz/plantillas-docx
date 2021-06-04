@@ -1,14 +1,14 @@
 import { IsString } from "class-validator";
 import { Exclude, Expose, Type } from 'class-transformer';
-import { ReadVariableDto } from "./read-variable.dto";
+import { ReadDocumentDto } from "./read-document.dto";
 
 @Exclude()
-export class DeleteVariableDto {
+export class DeleteDocumentDto {
     @Expose()
     @IsString()
     message: string;
 
     @Expose()
-    @Type(() => ReadVariableDto)
-    deleted_variable: ReadVariableDto;
+    @Type(() => ReadDocumentDto)
+    deleted_document: ReadDocumentDto;
 }
